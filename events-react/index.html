@@ -14,16 +14,27 @@
     <div id="root"></div>
 
     <script type="text/babel">
+        // use this if you're not passing any arguments
+        // function Tickle()
+        // {
+        //     const tickleMe = () => 
+        //     {
+        //         alert("I've been tickled!");
+        //     }
+
+        //     return <button onClick={tickleMe}>Tickle me </button>
+        // }
+
+        // with arguments
         function Tickle()
         {
-            const tickleMe = () => 
+            const tickleMe = (a) => 
             {
-                alert("I've been tickled!");
+                alert(a);
             }
 
-            return <button onClick={tickleMe}>Tickle me </button>
+            return <button onClick={() => tickleMe("hehehe")}>Tickle me </button>
         }
-
         const root = ReactDOM.createRoot(document.getElementById('root'));
         root.render(<Tickle />);
     </script>
