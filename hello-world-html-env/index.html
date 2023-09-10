@@ -16,10 +16,13 @@
         function Hello()
         {
             return <h1>Hello World!</h1>
+            //returns the content of the website
         }
-
+        // selects the element to be the main container
         const container = document.getElementById('mydiv');
+        // creates a root to display react components inside a browser dom
         const root = ReactDOM.createRoot(container);
+        //displays contents in the root 
         root.render(<Hello/>)
     </script>
 </body>
