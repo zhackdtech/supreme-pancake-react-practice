@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditions - react</title>
+    <!-- props stands for properties -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+    <div id="mydiv">
+    </div>
+
+    <script type="text/babel">
+        //standard conditional operators
+        // function Tickled() {
+        //     return <h1>You got tickled!</h1>
+        // }
+        // function NotTickled() {
+        //     return <h1>Missed</h1>
+        // }
+        // function Tickle(props) {
+        //     const isTickled = props.tickleStatus;
+        //     if (isTickled) {
+        //         return <Tickled />
+        //     }
+        //     return <NotTickled />
+        // }
+
+        //Logical && operator
+        // function BikiniBottom(props) {
+        //     const pops = props.population;
+        //     return (
+        //         <>
+        //             <h1>Bikini bottom population:</h1>
+        //             {pops.length > 0 &&
+        //                 <h2>{pops.length}</h2>}
+        //         </>
+        //     );
+        // }
+        // const popsss = ['Spongebob', 'Squidward', 'Mr Crabs'];
+        // root.render(<BikiniBottom population={popsss} />);
+
+        // Using ternary operators
+        function Tickled() {
+            return <h1>You got tickled!</h1>
+        }
+        function NotTickled() {
+            return <h1>Missed</h1>
+        }
+        function Tickle(props)
+        {
+            const isTickled = props.tickleStatus;
+            return(
+                <>
+                {isTickled ? <Tickled /> : <NotTickled />}
+                </>
+            )
+        }
+        const root = ReactDOM.createRoot(document.getElementById('mydiv'));
+        root.render(<Tickle tickleStatus={true} />);
+    </script>
+</body>
+
+</html>
