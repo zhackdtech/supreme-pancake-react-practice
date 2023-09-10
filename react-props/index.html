@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROPS - react</title>
+    <!-- props stands for properties -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+    <div id="mydiv">
+    </div>
+
+    <script type="text/babel">
+        function BikiniBottom(props)
+        {
+            return <h1>{props.name}</h1>
+        }
+        function Who()
+        {
+            return(
+                <>
+                <h1>Who lives in pineapple under the sea?</h1>
+                <BikiniBottom name="Spongebob Squarepants"/>
+                </>
+            )
+        }
+
+        const root = ReactDOM.createRoot(document.getElementById('mydiv'));
+        root.render(<Who />)
+    </script>
+</body>
+
+</html>
